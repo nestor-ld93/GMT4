@@ -5,7 +5,7 @@
 [![GitHub oficial release](https://img.shields.io/badge/oficial-release-orange.svg)](https://www.generic-mapping-tools.org/download/)
 [![The Founders](https://img.shields.io/badge/authors-blue.svg)](https://github.com/GenericMappingTools/gmt/blob/master/AUTHORS.md)
 
-Se presenta la instalación^(1) de GMT^(2) (Generic Mapping Tools) de forma semi-desatendida,
+Se presenta la instalación(1) de GMT(2) (Generic Mapping Tools) de forma semi-desatendida,
 mediante scripts funcionales para sistemas operativos basados en GNU/Linux Ubuntu
 14.04 y superiores.
 
@@ -16,27 +16,27 @@ mediante scripts funcionales para sistemas operativos basados en GNU/Linux Ubunt
 **NOTA 1:**
 Mas detalles en el archivo `Instalación_GMT_v.4.5.14_rev1.2.pdf`.
 
-**NOTA 2**
+**NOTA 2:**
 Se utiliza la versión `4.5.14`.
 
 ## Contenido
 
-- [¿Qué es GMT?](#gmt)
+- [¿Qué es GMT?](#qué-es-gmt)
 - [Preparativos](#preparativos)
 - [Clonando el repositorio](#clonando-el-repositorio)
-- [Instalación](#instalacion)
-  * [Instalación de NetCDF 3.6.3](#instalacion-de-netcdf-3.6.3)
-  * [Instalación de GSHHG 2.2.4](#instalacion-de-gshhg-2.2.4)
-  * [Instalación de GMT 4](#instalacion-de-gmt-4)
-  * [Modificación de .bashrc](#Modificacion-de-.bashrc)
-  * [Verificación](#Verificacion)
+- [Instalación](#instalación)
+  * [Instalación de NetCDF 3.6.3](#instalación-de-netcdf-363)
+  * [Instalación de GSHHG 2.2.4](#instalación-de-gshhg-224)
+  * [Instalación de GMT 4](#instalación-de-gmt-4)
+  * [Modificación de .bashrc](#modificación-de-bashrc)
+  * [Verificación](#verificación)
 - [REFERENCIAS](#referencias)
 - [RECONOCIMIENTO](#reconocimiento)
 
 ## ¿Qué es GMT?
 
-`GMT` es un entorno de programación de código abierto (Open Source) utilizando
-para la manipulación de conjunto de datos cartesianos y geográficos (incluyendo
+`GMT` es un entorno de programación de código abierto (Open Source) utilizado
+para la manipulación de conjuntos de datos cartesianos y geográficos (incluyendo
 filtrado, ajuste de tendencia, grillado, proyecciones, etc.) obteniéndose imágenes de
 alta calidad en formato PS (Post Script) desde simples gráficos XY, mapas de contornos
 hasta superficies iluminadas artificialmente y vistas en perspectivas 3D.
@@ -45,7 +45,7 @@ hasta superficies iluminadas artificialmente y vistas en perspectivas 3D.
 
 La instalación de GMT requiere un sistema operativo GNU/Linux con ciertas
 dependencias de compilación, como los lenguajes de programación `Fortran` y `C`. Por
-tal motivo, iniciamos abriendo un terminal y digitando las siguientes instrucciones:
+tal motivo, iniciamos abriendo un terminal y digitamos las siguientes instrucciones:
 
     sudo apt-get update
     sudo apt-get install libhdf5-serial-dev build-essential gcc gfortran
@@ -59,7 +59,7 @@ el siguiente comando en un terminal:
     git clone https://github.com/nestor-ld93/GMT4
     cd GMT4
 
-Los archivos necesarios son:
+Los archivos requeridos son:
 
 1. `install_gmt4.sh`
 2. `install_netcdf.sh`
@@ -70,7 +70,7 @@ Los archivos necesarios son:
 7. `rm_instaladores.sh`
 
 Crear el directorio de instalación. Como ejemplo, se creó la carpeta `gmt` en la
-ubicación^(3) `/opt` de la siguiente manera^(4):
+ubicación(3) `/opt` de la siguiente manera(4):
 
     sudo mkdir /opt; sudo mkdir /opt/gmt
 
@@ -78,7 +78,7 @@ ubicación^(3) `/opt` de la siguiente manera^(4):
 Se recomienda utilizar la ubicación `/opt` por motivos de permisos del sistema y seguridad.
 
 **NOTA 4:**
-`sudo mkdir /opt;` debe ser omitido si la carpeta opt ya existe.
+`sudo mkdir /opt;` debe ser omitido si la carpeta `opt` ya existe.
 
 Ubicarse en la carpeta contenedora de los archivos descargados y copiarlos a
 `/opt/gmt` con el siguiente comando:
@@ -111,7 +111,7 @@ GSHHG es un conjunto de datos geográficos de alta resolución generado a partir
 de dos bases de datos de dominio público: World Vector Shorelines (WVS) y CIA
 World Data Bank II (WDBII). El primero es la base de las líneas de costa, mientras
 que el segundo es la base de las fronteras políticas, ríos y lagos.
-Como se mencionó, este proceso está incluído durante la instalación de GMT^(5).
+Como se mencionó, este proceso está incluído durante la instalación de GMT(5).
 
 **NOTA 5:**
 Se eligió esta forma de instalación, el usuario final es libre de modificar el script
@@ -120,7 +120,7 @@ para una instalación separada.
 ### Instalación de GMT 4
 
 Este paso normalmente requiere participación del usuario de forma continua,
-para evitarlo, se creó un script de parámetros personalizados que permitirá una
+para evitarlo se creó un script de parámetros personalizados que permite una
 instalación desantendida (`GMT4param.txt`).
 
 Asignar permisos de ejecución e iniciar el instalador:
@@ -131,7 +131,7 @@ Asignar permisos de ejecución e iniciar el instalador:
 Finalmente, una vez terminada la ejecución, GMT 4 se encontrará instalado
 pero siendo aún inutilizable de forma directa.
 
-Si lo desea, puede eliminar los instaladores^(6) contenidos en `/opt/gmt` de la siguiente
+Si lo desea, puede eliminar los instaladores(6) contenidos en `/opt/gmt` de la siguiente
 manera:
 
     sudo chmod +x rm_instaladores.sh
@@ -143,7 +143,7 @@ Es seguro eliminarlos, no afectan la instalación y se liberará espacio.
 ### Modificación de .bashrc
 
 El último paso es modificar el archivo oculto `.bashrc` ubicado en el directorio
-personal. Para ello, abrir un nuevo terminal y utilizar^(7):
+personal. Para ello, abrir un nuevo terminal y utilizar(7):
 
     gedit /home/usuario/.bashrc
 
@@ -170,12 +170,12 @@ Ubicarse en `/opt/gmt` y verificar que se encuentren alojadas las siguientes car
 
 Si todo está bien, entonces proceder con lo siguiente.
 
-Abrir un nuevo terminal^(8) y utilizar la siguiente sentencia:
+Abrir un nuevo terminal(8) y utilizar la siguiente sentencia:
 
     which pscoast
 
 **NOTA 8:**
-Es necesario abrir un nuevo terminal para que los cambios en .bashrc surtan efecto.
+Es necesario abrir un nuevo terminal para que los cambios en `.bashrc` surtan efecto.
 
 Dentro del mismo terminal, aparecerá como respuesta lo siguiente:
 
