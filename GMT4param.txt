@@ -1,0 +1,79 @@
+# This file contains parameters needed by the install script
+# install_gmt for GMT Version 4.5.14.  Give this file
+# as the argument to the install_gmt script and the whole
+# installation process can be placed in the background.
+# Default answers will be selected where none is given.
+# You can edit the values, but do not remove definitions!
+#
+# Assembled by gmt_install_form.html, $Revision: 10353 $
+# Processed by install_gmt_form.pl : 10353  on
+#
+#	Sun Oct 30 05:29:08 HST 2016
+#
+# Do NOT add any spaces around the = signs.  The
+# file MUST conform to Bourne shell syntax
+#---------------------------------------------
+#	GMT VERSION
+#---------------------------------------------
+GMT_version=4.5.14
+#---------------------------------------------
+#	SYSTEM UTILITIES AND FTP SETTING
+#---------------------------------------------
+GMT_make=make
+passive_ftp=y
+#---------------------------------------------
+#	NETCDF SECTION
+#---------------------------------------------
+netcdf_path=$PWD/netcdf-3.6.3
+#---------------------------------------------
+#	GSHHG SECTION
+#---------------------------------------------
+GSHHG_install=y
+GSHHG_ftp=n
+GSHHG_path=$PWD
+#---------------------------------------------
+#	GDAL SECTION
+#---------------------------------------------
+use_gdal=n
+gdal_path=
+#---------------------------------------------
+#	GMT FTP SECTION
+#---------------------------------------------
+GMT_ftp=n
+GMT_ftpsite=4
+GMT_inst_gmt=y
+#---------------------------------------------
+#	GMT SUPPLEMENTS SELECT SECTION
+#---------------------------------------------
+GMT_suppl_mex=d
+GMT_mex_type=octave
+GMT_suppl_xgrid=d
+#---------------------------------------------
+#	GMT ENVIRONMENT SECTION
+#---------------------------------------------
+GMT_si=y
+GMT_ps=y
+GMT_prefix=$PWD/gmt-4.5.14
+GMT_bin=$PWD/gmt-4.5.14/bin
+GMT_lib=$PWD/gmt-4.5.14/lib
+GMT_share=$PWD/gmt-4.5.14/share
+GMT_include=$PWD/gmt-4.5.14/include
+GMT_man=$PWD/gmt-4.5.14/man
+GMT_doc=$PWD/gmt-4.5.14/share/doc/gmt
+GMT_sharedir=$PWD/gmt-4.5.14/share
+#---------------------------------------------
+#	COMPILING & LINKING SECTION
+#---------------------------------------------
+GMT_sharedlib=n
+GMT_cc=gcc
+GMT_64=
+GMT_flock=y
+GMT_triangle=y
+#---------------------------------------------
+#	TEST & print FILE SECTION
+#---------------------------------------------
+GMT_run_examples=y
+GMT_delete=n
+#---------------------------------------------
+#	MEX SECTION
+#---------------------------------------------
